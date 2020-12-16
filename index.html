@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/modules/timeline.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper blue lighten-1">
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="acknowledgement.html">Acknowledgements</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class='row'>
+        <div class='col s4 offset-s1'>
+            <div class="card large">
+                <div class="card-content">
+                    <div id="scatter"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class='col s4 offset-s1'>
+            <div class="card large">
+                <div class="card-content">
+                    <span class="card-title">
+                        <h5><b>Resale vs. Retail</b></h5>
+                    </span>
+                    <h6> The sneaker resale market has grown exponentially over the years, with an estimated value of $6
+                        billion dollars by 2025. One of the major marketplaces, StockX, works with a bid-ask system,
+                        where buyers place bids on the model and size they want, while sellers can fulfill these bids or
+                        place an ask of a price they are looking for.
+                    </h6>
+                    <h6> With such a booming market, many people are now looking towards sneakers as an investment, and
+                        like any other investment, whether it be stocks, art, or real estate, there are many nuances one
+                        must be aware of when deciding which pairs to buy and hold. Some models, like the <a
+                            href='https://stockx.com/air-jordan-1-mid-chicago-toe'>Air Jordan 1 Mid 'Chicago Black
+                            Toe'</a> and the <a href='https://stockx.com/jordan-1-retro-chicago-2015'>Air Jordan 1 High
+                            'Chicago'</a> look extremely similar to the untrained eye, but fetch magnitudes of different
+                        prices. Furthermore, not every model appreciates in value at the same pace, or may not
+                        appreciate at all, and stay flat or even depreciate. In order to show general trends, I
+                        collected 16 pairs of sneakers that could be used as a starting point in understand what sells
+                        and what doesn't.
+                    </h6>
+                    <h6>
+                        Split into four categories for the four major brands (Jordan Brand, Nike, Yeezy, adidas), each
+                        model has a different trajectory that can be replicated with other models. Note that Jordan
+                        Brand is a part of Nike, and Yeezy is a part of adidas, but both have grown to such high levels
+                        that many people consider them separate entities when discussing sneakers.
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col s10 offset-s1'>
+            <div class="card large">
+                <div class="card-content">
+                    <div id="timeline"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <ul class="tabs tabs-fixed-width">
+        <li class="tab"><a class="active" href="#jordan"><b>Jordan</b></a></li>
+        <li class="tab"><a href="#nike"><b>Nike</b>></a></li>
+        <li class="tab"><a href="#yeezy"><b>Yeezy</b>></a></li>
+        <li class="tab"><a href="#adidas"><b>Adidas</b></a></li>
+    </ul>
+    <br>
+    <div id="jordan" class="col s12">
+        <div class="row">
+            <!-- chicago1 -->
+            <section>
+                <div class="col s6 offset-s1">
+                    <div class="card large">
+                        <div class="card-content">
+                            <span class="card-title">
+                                <h5><b>Jordan 1 Retro 'Chicago' 2015</b></h5>
+                            </span>
+                            <div id="chicago"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card large center">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s12">
+                                    <img src="images/chicago.jpg"
+                                        style="height:200px; width:auto; align-content: center;">
+                                </div>
+                                <div class="col s4">
+                                    <h5>Retail Price:</h5>
+                                    <h6> $160.00</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Release Date:</h5>
+                                    <h6> May 30, 2015</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Average Resale:</h5>
+                                    <h6> $1,326.00</h6>
+                                </div>
+                                <div class="col s12 left-align">
+                                    <h6> The most classic Jordan of all time, this model in this colorway was Jordan's
+                                        first signature shoe. It originally debuted in 1985 during Jordan's rookie
+                                        season, and has returned in this form three times since then: in 1994, 2013, and
+                                        2015. Clearly, the 2015 iteration has been in very high demand since its
+                                        release, with prices never dipping much below $500. However, with the
+                                        announcement of The Last Dance, a docuseries on Michael
+                                        Jordan's career, the price on these skyrocketed, and can now fetch abouve
+                                        $2,000. There are rumors of a 2021 restock however, so
+                                        the price on this iteartion may change once that date passes.
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- bred4 -->
+            <section>
+                <div class="col s6 offset-s1">
+                    <div class="card large">
+                        <div class="card-content">
+                            <span class="card-title">
+                                <h5><b>Jordan 4 Retro 'Bred' 2019</b></h5>
+                            </span>
+                            <div id="bred"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card large center">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s12">
+                                    <img src="images/bred4.jpg"
+                                        style="height:200px; width:auto; align-content: center;">
+                                </div>
+                                <div class="col s4">
+                                    <h5>Retail Price:</h5>
+                                    <h6> $200.00</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Release Date:</h5>
+                                    <h6> May 4, 2019</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Average Resale:</h5>
+                                    <h6> $351.00</h6>
+                                </div>
+                                <div class="col s12 left-align">
+                                    <h6> Yet another classic Jordan model. this colorway was originally released in
+                                        1989. Since then, this colorway has returned
+                                        twice, in 1999 and in 2012. However, the 2012 model was not very true to the
+                                        original, with a Jumpman logo on the heel of the shoe rather than a Nike Air
+                                        logo. When the 2020 restock was announced, it marked the first time in over 20
+                                        years since a true-to-the-original version of the Bred (Black Red) Jordan 4 had
+                                        released. Stock numbers were incredibly high, and early on the pair hardly sold
+                                        for over retail price. However, as time goes on the price has gone up
+                                        significantly, and can now fetch over 400 dollars.
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- concord11 -->
+            <section>
+                <div class="col s6 offset-s1">
+                    <div class="card large">
+                        <div class="card-content">
+                            <span class="card-title">
+                                <h5><b>Jordan 11 Retro 'Concord' 2018</b></h5>
+                            </span>
+                            <div id="concord"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card large center">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s12">
+                                    <img src="images/concord11.jpg"
+                                        style="height:200px; width:auto; align-content: center;">
+                                </div>
+                                <div class="col s4">
+                                    <h5>Retail Price:</h5>
+                                    <h6> $220.00</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Release Date:</h5>
+                                    <h6> December 8, 2018</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Average Resale:</h5>
+                                    <h6> $378.00</h6>
+                                </div>
+                                <div class="col s12 left-align">
+                                    <h6> This colorway of the Jordan 11 is nicknamed 'Concord' for the hits of purple on
+                                        the sole, similar in color to Concord grapes. When the shoe was originally
+                                        released in 1995, its nontraditional look and materials completely changed the
+                                        sneaker game. This model has returned in various forms, including in a low-top
+                                        form and even in cleat form, many times. This 2018 restock was rumored to be
+                                        over 1 million pairs. However, demand was extremely high and though prices have
+                                        stayed flat for the first year or so of its release, recently the price has been
+                                        climbing quickly, in part thanks to The Last Dance docuseries.
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- smokegrey1mid -->
+            <section>
+                <div class="col s6 offset-s1">
+                    <div class="card large">
+                        <div class="card-content">
+                            <span class="card-title">
+                                <h5><b>Jordan 1 Mid 'Light Smoke Grey' 2020</b></h5>
+                            </span>
+                            <div id="smokegrey"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card large center">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s12">
+                                    <img src="images/smokegrey1.jpg"
+                                        style="height:200px; width:auto; align-content: center;">
+                                </div>
+                                <div class="col s4">
+                                    <h5>Retail Price:</h5>
+                                    <h6> $115.00</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Release Date:</h5>
+                                    <h6> June 9, 2020</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Average Resale:</h5>
+                                    <h6> $197.00</h6>
+                                </div>
+                                <div class="col s12 left-align">
+                                    <h6> Interestingly, Jordan 1 Mids were considered a sub-par shoe since its release.
+                                        They were the 'wanna-be' Jordan 1s, and often sat on sale on outlet shelves.
+                                        However, in 2020, Jordan Brand started pumping out actual desirable
+                                        colorways, such as this Light Smoke Grey pair, and the publics' outlook on Mids
+                                        have slowly started to change. This colorway released right after the Dior
+                                        Jordan 1s, a retail $2,200 price luxury collaboration released, and the colors
+                                        are nearly identical, which may explain the unusally high price for a pair of
+                                        Mids. If the public opinion changes even more favorable towards Mids, the price
+                                        on this pair may climb even higher.
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div id="nike" class="col s12">
+        <div class="row">
+            <!-- owblazer -->
+            <section>
+                <div class="col s6 offset-s1">
+                    <div class="card large">
+                        <div class="card-content">
+                            <span class="card-title">
+                                <h5><b>Nike Blazer Mid 'Off-White' 2017</b></h5>
+                            </span>
+                            <div id="owblazer"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card large center">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s12">
+                                    <img src="images/owblazer.jpg"
+                                        style="height:200px; width:auto; align-content: center;">
+                                </div>
+                                <div class="col s4">
+                                    <h5>Retail Price:</h5>
+                                    <h6> $130.00</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Release Date:</h5>
+                                    <h6> September 9, 2017</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Average Resale:</h5>
+                                    <h6> $1,534.00</h6>
+                                </div>
+                                <div class="col s12 left-align">
+                                    <h6> Part of Nike and Off-White(a designer clothing brand created by Virgil Abloh)'s
+                                        landmark 'The Ten' collaboration,
+                                        this model was an instant hit and sold out immediately on release. Though other
+                                        pairs, like the Off-White Jordan 1 and Off-White Air Force 1 fetch even higher
+                                        prices, the Blazer Mid has kept up in price over the years. Since then,
+                                        Off-White has grown into an even larger brand, and Virgil Abloh was appointed to
+                                        the head of Louis Vuitton, which may explain the consistent rise in value of
+                                        this pair.
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- element87 -->
+            <section>
+                <div class="col s6 offset-s1">
+                    <div class="card large">
+                        <div class="card-content">
+                            <span class="card-title">
+                                <h5><b>Nike React Element 87 'Anthracite Black' 2018</b></h5>
+                            </span>
+                            <div id="element87"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card large center">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s12">
+                                    <img src="images/element87.jpg"
+                                        style="height:200px; width:auto; align-content: center;">
+                                </div>
+                                <div class="col s4">
+                                    <h5>Retail Price:</h5>
+                                    <h6> $160.00</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Release Date:</h5>
+                                    <h6> June 14, 2018</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Average Resale:</h5>
+                                    <h6> $100.00</h6>
+                                </div>
+                                <div class="col s12 left-align">
+                                    <h6>The shoe was named 'Shoe of the Year' by Complex News when it first came out in
+                                        2018 as a two pack, a white pair and a black pair. At first this model fetched
+                                        fairly high prices, around $300, but none of the later colorways produced by
+                                        Nike had the same success, with most pairs eventually going on sale. When a
+                                        restock of this pair was announced, the price instantly dropped, and has not
+                                        recovered since. The restocked pairs eventually went on sale, and the average
+                                        resale price of this pair has dropped to sub $100 levels, a shocking price for a
+                                        $160 retail shoe that resold for over $300 less than a year ago.
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- sean97 -->
+            <section>
+                <div class="col s6 offset-s1">
+                    <div class="card large">
+                        <div class="card-content">
+                            <span class="card-title">
+                                <h5><b>Nike Air Max 1/97 'Sean Wotherspoon' 2018</b></h5>
+                            </span>
+                            <div id="sean97"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card large center">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s12">
+                                    <img src="images/sean97.jpg"
+                                        style="height:200px; width:auto; align-content: center;">
+                                </div>
+                                <div class="col s4">
+                                    <h5>Retail Price:</h5>
+                                    <h6> $160.00</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Release Date:</h5>
+                                    <h6> March 26, 2018</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Average Resale:</h5>
+                                    <h6> $1,181.00</h6>
+                                </div>
+                                <div class="col s12 left-align">
+                                    <h6> A collaboration between Nike and Sean Wotherspoon (founder of Round Two, a
+                                        streetwear and sneaker consignment store). With its
+                                        unique materials and colorway, the shoe was very successful, fetching around
+                                        $600 at release. Later on, rumors started circulating that Sean
+                                        Wotherspoon and Nike had split up. Prices started to climb, and eventually when
+                                        Sean
+                                        officially announced so on social media, the price skyrocketed to where it is
+                                        today, at over $1000 dollars. Since then, Sean has worked on sneakers with
+                                        adidas and Asics among others, but none have replicated the success that this
+                                        pair has had.
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- purple -->
+            <section>
+                <div class="col s6 offset-s1">
+                    <div class="card large">
+                        <div class="card-content">
+                            <span class="card-title">
+                                <h5><b>Nike SB Dunk Low 'Concepts Purple Lobster' 2018</b></h5>
+                            </span>
+                            <div id="purple"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card large center">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s12">
+                                    <img src="images/purple.jpg"
+                                        style="height:200px; width:auto; align-content: center;">
+                                </div>
+                                <div class="col s4">
+                                    <h5>Retail Price:</h5>
+                                    <h6> $100.00</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Release Date:</h5>
+                                    <h6> December 14, 2018</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Average Resale:</h5>
+                                    <h6> $778.00</h6>
+                                </div>
+                                <div class="col s12 left-align">
+                                    <h6> A collaboration between Nike and long time collaborator sneaker boutique
+                                        Concepts, this was the fifth pair in the 'Lobster' collection between the two.
+                                        Though its initial prices were fairly high, when Travis Scott wore this pair on
+                                        his Instagram, the prices shot up to where it is today. 2019/20 has seen a Nike
+                                        Dunk renaissance led by Travis, with old pairs that sold for sub retail prices
+                                        just a few years ago shot up in value. Currently the Dunk market has inflated to
+                                        a crazy level, with old models such as the Newcastles, which released in 2008,
+                                        fetching prices of +$1000 even though just a few years ago they were a hard sell
+                                        at $80.
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div id="yeezy" class="col s12">
+        <div class="row">
+            <!-- turtledove -->
+            <section>
+                <div class="col s6 offset-s1">
+                    <div class="card large">
+                        <div class="card-content">
+                            <span class="card-title">
+                                <h5><b>Yeezy Boost 350 'Turtledove'</b></h5>
+                            </span>
+                            <div id="turtledove"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card large center">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s12">
+                                    <img src="images/turtledove.jpg"
+                                        style="height:200px; width:auto; align-content: center;">
+                                </div>
+                                <div class="col s4">
+                                    <h5>Retail Price:</h5>
+                                    <h6> $200.00</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Release Date:</h5>
+                                    <h6> June 27, 2015</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Average Resale:</h5>
+                                    <h6> $1,558.00</h6>
+                                </div>
+                                <div class="col s12 left-align">
+                                    <h6> Though Kanye first collaborated with Nike, their relationship soured when Nike
+                                        refused to give Kanye the creative freedom that he wanted. Eventually, he left
+                                        Nike to join adidas, who promised him infinite freedom to design as he wanted.
+                                        The first adidas x Kanye shoe were these, the Yeezy Boost 350s. With low stock
+                                        and an A-tier name behind it, the shoe sold out instantly and fetched prices of
+                                        over $2,000. However, as new models continue to release, the hype for the
+                                        original 350 has died down quite a bit, and now go for around $900, still an
+                                        extremely high price but nowhere near its original highs.
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- zebra -->
+            <section>
+                <div class="col s6 offset-s1">
+                    <div class="card large">
+                        <div class="card-content">
+                            <span class="card-title">
+                                <h5><b>Yeezy Boost 350 V2 'Zebra'</b></h5>
+                            </span>
+                            <div id="zebra"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card large center">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s12">
+                                    <img src="images/zebra.jpg"
+                                        style="height:200px; width:auto; align-content: center;">
+                                </div>
+                                <div class="col s4">
+                                    <h5>Retail Price:</h5>
+                                    <h6> $220.00</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Release Date:</h5>
+                                    <h6> February 25, 2017</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Average Resale:</h5>
+                                    <h6> $342.00</h6>
+                                </div>
+                                <div class="col s12 left-align">
+                                    <h6> One of the most popular Yeezy colorways, the Zebra saw an initial hyper-limited
+                                        release and fetched prices of over $1,500. However, the sneaker has seen four
+                                        major restocks since then as well as countless minor restocks, and the price has
+                                        come crashing down. However, demand for this colorway remains extremely high,
+                                        and evne with the multiple restocks and huge stock counts the sneaker still goes
+                                        for over $100 above retail price. Every restock drops the price, but they
+                                        eventually climb back up slowly, likely because of the huge demand for this
+                                        sneaker.
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- hylte -->
+            <section>
+                <div class="col s6 offset-s1">
+                    <div class="card large">
+                        <div class="card-content">
+                            <span class="card-title">
+                                <h5><b>Yeezy Boost 380 'Hylte'</b></h5>
+                            </span>
+                            <div id="hylte"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card large center">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s12">
+                                    <img src="images/hylte.jpg"
+                                        style="height:200px; width:auto; align-content: center;">
+                                </div>
+                                <div class="col s4">
+                                    <h5>Retail Price:</h5>
+                                    <h6> $230.00</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Release Date:</h5>
+                                    <h6> December 12, 2020</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Average Resale:</h5>
+                                    <h6> $189.00</h6>
+                                </div>
+                                <div class="col s12 left-align">
+                                    <h6> Not every Yeezy is a hit, however. The 380, a relatively new model with a much
+                                        more unique look than the 350 V2, has struggled to sell out on release dates.
+                                        This latest colorway, Hylte (pronounced highlight), comes in a questionable
+                                        yellow-green color, and was immediately unpopular upon reveal. The shoe still
+                                        has not sold out after days, and resale prices are extremely low, with some
+                                        pairs going for under $150, over $80 below retail price. Just because a sneaker
+                                        has the Yeezy name attatched to it doesn't mean that the shoe will be an instant
+                                        hit, or a hit at all.
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- cream -->
+            <section>
+                <div class="col s6 offset-s1">
+                    <div class="card large">
+                        <div class="card-content">
+                            <span class="card-title">
+                                <h5><b>Yeezy Boost 350 V2 'Cream/Triple White'</b></h5>
+                            </span>
+                            <div id="cream"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card large center">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s12">
+                                    <img src="images/cream.jpg"
+                                        style="height:200px; width:auto; align-content: center;">
+                                </div>
+                                <div class="col s4">
+                                    <h5>Retail Price:</h5>
+                                    <h6> $220.00</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Release Date:</h5>
+                                    <h6> April 29, 2017</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Average Resale:</h5>
+                                    <h6> $358.00</h6>
+                                </div>
+                                <div class="col s12 left-align">
+                                    <h6> With a colorway that doesn't get any cleaner, the Yeezy 350 V2 'Cream' (also
+                                        known as Triple White) is extremely popular as a basic, easy-to-wear sneaker.
+                                        Its initial release saw prices of over $500, but eventually a massive restock,
+                                        where adidas took infnite orders for a duration of time as a made-to-order
+                                        sneaker, caused the price to come crashing down. However, demand for the model
+                                        clearly remains very high, and despite the 'infnite' restock prices have climbed
+                                        to over double retail, with some sizes fetching three or four times retail
+                                        price.
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div id="adidas" class="col s12">
+        <div class="row">
+            <!-- teetime -->
+            <section>
+                <div class="col s6 offset-s1">
+                    <div class="card large">
+                        <div class="card-content">
+                            <span class="card-title">
+                                <h5><b>adidas Ultra Boost 1.0 'SNS Tee Time'</b></h5>
+                            </span>
+                            <div id="teetime"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card large center">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s12">
+                                    <img src="images/teetime.jpg"
+                                        style="height:200px; width:auto; align-content: center;">
+                                </div>
+                                <div class="col s4">
+                                    <h5>Retail Price:</h5>
+                                    <h6> $180.00</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Release Date:</h5>
+                                    <h6> January 22, 2016</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Average Resale:</h5>
+                                    <h6> $654.00</h6>
+                                </div>
+                                <div class="col s12 left-align">
+                                    <h6> This sneaker was part of adidas' original 'Consortium' collection, where adidas
+                                        teamed up with various boutiques to produce colorways of the still fresh Ultra
+                                        Boost. This model, a collaboration with SneakersNStuff, was one of the most
+                                        popular at the time, with prices reaching over $2,000. However, since adidas'
+                                        golden years of 2015-2017, the hype for Ultra Boosts have died completely, and
+                                        every model has come down in price greatly. Even the Tee Times, the most
+                                        popular, currently go for less than a third of its peak prices.
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- burgundy -->
+            <section>
+                <div class="col s6 offset-s1">
+                    <div class="card large">
+                        <div class="card-content">
+                            <span class="card-title">
+                                <h5><b>adidas Ultra Boost 1.0 'Burgundy'</b></h5>
+                            </span>
+                            <div id="burg"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card large center">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s12">
+                                    <img src="images/burgundy.jpg"
+                                        style="height:200px; width:auto; align-content: center;">
+                                </div>
+                                <div class="col s4">
+                                    <h5>Retail Price:</h5>
+                                    <h6> $180.00</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Release Date:</h5>
+                                    <h6> September 9, 2015</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Average Resale:</h5>
+                                    <h6> $151.00</h6>
+                                </div>
+                                <div class="col s12 left-align">
+                                    <h6> One of the original colorways of the Ultra Boost debuting in 2015, the Burgundy
+                                        colorway, alongside the Olive colorway, were extremely limited and were worth
+                                        over $2,000 at one point, despite it being a general colorway and not a
+                                        collaboration. However, similar to the Tee Times, the waning popularity of the
+                                        Ultra Boost has brought its price down considerably, and a restock of this
+                                        colorway in 2020 completely killed resale, and are still available at retailers
+                                        for half off. Once one of the most hyped Ultra Boost colorways of all time, now
+                                        this colorway sits on discount store racks.
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- hu -->
+            <section>
+                <div class="col s6 offset-s1">
+                    <div class="card large">
+                        <div class="card-content">
+                            <span class="card-title">
+                                <h5><b>adidas Human Race NMD Pharrell 'Multi-Color'</b></h5>
+                            </span>
+                            <div id="hu"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card large center">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s12">
+                                    <img src="images/holi.jpg" style="height:200px; width:auto; align-content: center;">
+                                </div>
+                                <div class="col s4">
+                                    <h5>Retail Price:</h5>
+                                    <h6> $240.00</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Release Date:</h5>
+                                    <h6> November 11, 2017</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Average Resale:</h5>
+                                    <h6> $238.00</h6>
+                                </div>
+                                <div class="col s12 left-align">
+                                    <h6> Part of Pharell Williams' second collaboration with adidas. With the initial
+                                        collaboration pairs going for over $2,000, the sneakers in the second pack
+                                        fetched high prices initially, wt around $400. However, since then Pharell and
+                                        adidas has released unpopular colorway after colorway, and this alongside the
+                                        general declining hype for adidas sneakers have killed the resale market on all
+                                        Pharell shoes, now going for just below retail. It seems as if
+                                        adidas has realised its mistake of releasing so many undesirable colorways in a
+                                        row, as they are now producing more basic wearable colors. However, the public
+                                        has long since moved on from this model, and even those colorways have sat on
+                                        shelves.
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- bapeundef -->
+            <section>
+                <div class="col s6 offset-s1">
+                    <div class="card large">
+                        <div class="card-content">
+                            <span class="card-title">
+                                <h5><b>adidas ZX 8000 'Bape Undefeated Green'</b></h5>
+                            </span>
+                            <div id="bape"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card large center">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s12">
+                                    <img src="images/bapeundef.jpg"
+                                        style="height:200px; width:auto; align-content: center;">
+                                </div>
+                                <div class="col s4">
+                                    <h5>Retail Price:</h5>
+                                    <h6> $140.00</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Release Date:</h5>
+                                    <h6> November 14, 2020</h6>
+                                </div>
+                                <div class="col s4">
+                                    <h5>Average Resale:</h5>
+                                    <h6> $155.00</h6>
+                                </div>
+                                <div class="col s12 left-align">
+                                    <h6> adidas, boutique Undefeated, and streetwear brand Bape are long time
+                                        collaborators, having produced many shoes and apparel designs over the years.
+                                        The latest model, the adidas ZX 8000, was released in late 2020 to little
+                                        attention. Though once anything that Bape and adidas touched would have flown
+                                        off shelves, the waning public interest in both brands have killed the resale
+                                        market on these tremendously. Though a fairly wearble colorway compared to some
+                                        other adidas x Bape x Undefeated models, the hype for adidas is just not there
+                                        anymore. Eventually, these did sell out though, which is more than what can be
+                                        said for recent Pharell adidas collaborations.
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</body>
+<script>M.AutoInit();</script>
+
+</html>
